@@ -15,8 +15,8 @@ if __name__ == '__main__':
     # 账户配置
     subscribe_list = [b'rb2410']
     future_account = get_simulate_account(
-        investor_id='179939',                   # SimNow账户
-        password='jfy9601194415',                     # SimNow账户密码
+        investor_id='',                   # SimNow账户
+        password='',                     # SimNow账户密码
         subscribe_list=subscribe_list,  # 合约列表
         server_name='电信1'                      # 电信1、电信2、移动、TEST
     )

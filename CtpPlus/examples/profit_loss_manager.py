@@ -7,7 +7,7 @@
 from multiprocessing import Process, Queue
 from CtpPlus.CTP.MdApi import run_tick_engine
 from CtpPlus.CTP.TraderApi import run_traderapi
-from CtpPlus.CTP.FutureAccount import FutureAccount, get_simnow_account
+from CtpPlus.CTP.FutureAccount import FutureAccount, get_simulate_account
 
 if __name__ == '__main__':
 
@@ -21,13 +21,13 @@ if __name__ == '__main__':
     }
 
     # 账户配置
-    instrument_id_list = []
+    subscribe_list = []
     for instrument_id in pl_parameter['ProfitLossParameter']:
-        instrument_id_list.append(instrument_id)
-    future_account = get_simnow_account(
+        subscribe_list.append(instrument_id)
+    future_account = get_simulate_account(
         investor_id='',                         # SimNow账户
         password='',                            # SimNow账户密码
-        instrument_id_list=instrument_id_list,  # 合约列表
+        subscribe_list=subscribe_list,  # 合约列表
         server_name='TEST'                    # 电信1、电信2、移动、TEST
     )
 

@@ -2,8 +2,8 @@
 
 import time
 from multiprocessing import Queue
-from AlgoPlus.CTP.TraderApiBase import TraderApiBase
-from AlgoPlus.CTP.FutureAccount import get_simulate_account
+from CtpPlus.CTP.TraderApiBase import TraderApiBase
+from CtpPlus.CTP.FutureAccount import get_simulate_account
 
 
 class RollingTrade(TraderApiBase):
@@ -49,7 +49,7 @@ class RollingTrade(TraderApiBase):
 
 if __name__ == "__main__":
     # 账户配置
-    account = get_simnow_account(
+    account = get_simulate_account(
         investor_id=b'',
         password=b'',
         server_name='TEST'
